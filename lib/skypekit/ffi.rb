@@ -10,7 +10,8 @@ module Skypekit
     #
 
     #ffi_lib File.expand_path("../../../../libskypekit/lib/libskypekit.so", __FILE__)
-    ffi_lib "skypekit"
+    ffi_lib "#{ENV['LIBSKYPEKIT_PATH']}/libskypekit.so"
+    #ffi_lib "skypekit"
 
     ErrorType = enum(
       :already_running, 1,
